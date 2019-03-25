@@ -6,6 +6,7 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 function show(data) {
+  tbody.html("");
   data.forEach((UFOReport) => {
     var row = tbody.append("tr");
     Object.entries(UFOReport).forEach(([key, value]) => {
@@ -14,6 +15,8 @@ function show(data) {
     });
   });
 }
+
+show(tableData);
 
 var submit = d3.select("#filter-btn");
 
